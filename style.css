@@ -3,7 +3,7 @@
     --secondary-color: #373b69;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -13,34 +13,36 @@ body {
     margin: 0;
 }
 
-header{
+header {
     padding: 15px;
     display: flex;
     justify-content: flex-end;
+    background-color: var(--secondary-color);
 }
 
 .search {
     background-color: transparent;
     border: 2px solid var(--primary-color);
-    border-radius:50px;
+    border-radius: 50px;
     font-size: 20px;
     padding: 5px;
     color: rgb(159, 159, 199);
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .search::placeholder {
-    color:rgb(159, 159, 199);
+    color: rgb(159, 159, 199);
 }
 
-.search:focus{
+.search:focus {
     outline: none;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .movie {
@@ -76,18 +78,40 @@ main {
     color: yellowgreen;
 }
 
+.orange {
+    background-color: var(--primary-color);
+    padding: 4px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: orange;
+}
+
+.red {
+    background-color: var(--primary-color);
+    padding: 4px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: red;
+}
+
 .overview {
     background-color: #fff;
-    padding: 15px;
+    padding: 20px;
     position: absolute;
     left: 0;
     bottom: 0;
     right: 0;
     max-height: 100%;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 0.3s ease-in;
-  }
-  
-  .movie:hover .overview {
+}
+
+.movie:hover .overview {
     transform: translateY(0);
-  }
+}
+
+h1 {
+    color: rgb(235, 181, 137);
+    margin: 0 auto;
+    font-size: 40px;
+}
