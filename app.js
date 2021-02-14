@@ -1,12 +1,17 @@
-const API_URL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=7f0580dd5b7d1aec74b6664dd187c914&page=1"
+const API_URL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=7f0580dd5b7d1aec74b6664dd187c914&page=3"
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280"
 const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=7f0580dd5b7d1aec74b6664dd187c914&query="'
 
 const main = document.querySelector("#main");
 const form = document.querySelector("#form");
 const search = document.querySelector("#search");
+const mainPage = document.querySelector("#main-page")
 
 getMovies(API_URL);
+
+mainPage.addEventListener("click",function(){
+    getMovies(API_URL);
+})
 
 async function getMovies(url) {
     const res = await fetch(url)
@@ -66,4 +71,10 @@ form.addEventListener("submit", (e) => {
     } else {
         window.location.reload()
     }
+})
+
+let header = document.querySelector("#main-page")
+
+header.addEventListener("click",function(){
+    getMovies(API_URL);
 })
