@@ -1,4 +1,4 @@
-# ExpandingCards
+# MovieApp
 
 A simple movie application made using third party API. Some popular movies are shown on the homepage. You can find the movie you want by searching.
 
